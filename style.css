@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "asset";
+    src: url(assets/Asset-Regular.ttf);
+}
+
+body {
+    background-color: #1F1F1F;
+}
+
+.mainbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #65558F;
+}
+
+
+.songlist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* li {
+    height: 300px;
+    width: 300px;
+} */
+
+.songlist_songs {
+    height: 300px;
+    width: 300px;
+}
+
+.songlist_songs img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.songlist_songs h3 {
+    color: aliceblue;
+}
+
+.songlist_songs p {
+    color: aliceblue;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    font-family: "asset";
+    background-color: #65558F;
+
+}
+
+h1 {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+* {
+    box-sizing: border-box;
+    outline: unset;
+    border: unset;
+    margin: unset;
+    padding: unset;
+    /* Estas opciones de abajo son clave, poner siempre */
+}
