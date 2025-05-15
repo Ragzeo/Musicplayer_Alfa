@@ -22,6 +22,12 @@ body {
     width: auto;
     justify-content: center;
     gap: 50px;
+    padding: 25px;
+}
+
+.volumen {
+    display: flex;
+    flex-direction: row;
 }
 
 /* li {
