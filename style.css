@@ -3,6 +3,11 @@
     src: url(assets/Asset-Regular.ttf);
 }
 
+@font-face {
+    font-family: "IBM";
+    src: url(assets/IBMPlexMono-Regular.ttf);
+}
+
 body {
     background-color: #1F1F1F;
 }
@@ -11,6 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #65558F;
+    padding: 10px;
 }
 
 
@@ -23,11 +29,13 @@ body {
     justify-content: center;
     gap: 50px;
     padding: 25px;
+    font-family: "IBM";
 }
 
 .volumen {
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 
 /* li {
