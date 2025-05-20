@@ -1,25 +1,29 @@
-let puto = "puto el que lo lea"
-console.log(puto)
-console.log(puto)
-console.log(puto)
+const contenedorCanciones = document.getElementById('playlistid')
 
-const pagina = document
-
-console.log(pagina)
-
-const contenedor_musica = document.getElementById("playlistid")
-
-console.log (contenedor_musica)
-
-function Crear_html_de_canción () {
-
+function CrearHTMLCancion (loquesea) {
+    const li = document.createElement('div')
+    li.setAttribute("class", "songlist_songs")
+    li.innerHTML = `
+            <img src=${loquesea.image.url} alt="" id="song_1_cover">
+            <h3 id="song_1_name">${loquesea.title}</h3>
+            <p id="song_1_artist">${loquesea.author}</p>
+            <audio controls> <source src="${loquesea.audio.url}"</audio>
+    `
+    return li
 }
 
-// Hacer una petición para un usuario con ID especifico
+// Make a request for a user with a given ID
+axios.get('https://api.institutoalfa.org/api/songs/')
+  .then(function (response) {
+    // handle success
+    response.data.songs.map(function (loquesea) {
+        contenedorCanciones.appendChild(CrearHTMLCancion(loquesea))
+    })
+  })
+
 // axios.get('https://api.institutoalfa.org/api/songs')
 //     .then(function (response) {
-//         // manejar respuesta exitosa
 //         console.log(response.data.songs);
-
-//         response.data.songs.map(function(loque))
-//     })
+//         response.data.songs.map(function(Todalamusica, index){
+//     } document.getElementById("song_1").innerHTML = (Todalamusica.title))
+// } )
