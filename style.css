@@ -110,6 +110,7 @@ body {
     justify-content: center;
     gap: 5px;
     background-color: #352c4d;
+    width: 500px;
 }
 
 .songlist {
